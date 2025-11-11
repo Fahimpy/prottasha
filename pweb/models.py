@@ -2,6 +2,7 @@ from django.utils import timezone
 from django.db import models
 from django.contrib import admin
 from django.utils.text import slugify
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 # Create your models here.
@@ -26,7 +27,7 @@ class Notice(models.Model):
     title = models.CharField(max_length=255)
     notice_no = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, blank=True)
-    content = models.TextField()
+    content = RichTextUploadingField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     attachment = models.FileField(upload_to='attachments/', blank=True, null=True)
@@ -106,17 +107,17 @@ class Teachers(models.Model):
     )
 
     name = models.CharField(max_length=255)
-    tslug = models.SlugField(blank=True, unique=True)
+    tslug = models.SlugField(blank=True, unique=True, null=True)
     photo = models.ImageField(upload_to='Teachers/', blank=True, null=True)
     designation = models.CharField(max_length=100, blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
-    experience = models.TextField(blank=True, null=True)
+    experience = models.TextField(blank=True, null=True, help_text="Example: 5 years")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    about = models.TextField(blank=True, null=True)
-    education = models.TextField(blank=True, null=True)
-    subject = models.CharField(max_length=100, blank=True, null=True, help_text="mathematics,science,english,bangla,social-science,ict,islam etc")
+    about = RichTextUploadingField(blank=True, null=True)
+    education = models.TextField(blank=True, null=True, help_text="Write educational qualification as text / paragraph here")
+    subject = models.CharField(max_length=100, blank=True, null=True, help_text="mathematics, science, English, Bangla, Social-science, Ict, Islam etc")
     Specialization1 = models.TextField(blank=True, null=True)
     Specialization2 = models.TextField(blank=True, null=True)
     Specialization3 = models.TextField(blank=True, null=True)

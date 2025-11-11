@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -120,9 +122,52 @@ STATIC_URL = 'assets/'
 STATICFILES_DIRS = [BASE_DIR / 'assets']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            {'name': 'basicstyles', 'items': [
+                'Bold', 'Italic', 'Underline', 'Strike', '-', 
+                'Subscript', 'Superscript', '-', 'RemoveFormat'
+            ]},
+            {'name': 'paragraph', 'items': [
+                'NumberedList', 'BulletedList', '-', 
+                'Outdent', 'Indent', '-', 
+                'Blockquote', '-', 
+                'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'
+            ]},
+            {'name': 'links', 'items': ['Link', 'Unlink']},
+            {'name': 'insert', 'items': ['Image', 'Table', 'HorizontalRule', 'SpecialChar', 'Smiley']},
+            {'name': 'styles', 'items': ['Format', 'Font', 'FontSize', 'TextColor', 'BGColor']},
+            {'name': 'document', 'items': ['Source', '-', 'Maximize', 'Preview']},
+        ],
+        'height': 350,
+        'width': '100%',
+        'toolbarCanCollapse': True,
+        'extraPlugins': ','.join([
+            'uploadimage',
+            'image2',
+            'autogrow',
+            'justify',
+            'colorbutton',
+            'colordialog',
+            'table',
+            'tableresize',
+            'tableselection',
+            'pastefromword',
+            'widget'
+        ]),
+        'removeDialogTabs': 'image:advanced;link:advanced',
+        'allowedContent': True,   # সব HTML এলিমেন্ট রাখতে দেবে
+        'autoParagraph': True,
+        'tabSpaces': 4,
+    }
+}
