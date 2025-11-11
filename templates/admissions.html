@@ -1,0 +1,288 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Admissions - Prottasha Model School | Apply Now for Quality Education {% endblock %}
+{% block meta_description %} Apply for admission to Prottasha Model School. Learn about our admission process, requirements, fees, and download application forms. {% endblock %}
+{% block og_title %} Admissions - Prottasha Model School {% endblock %}
+{% block canonical_url %} https://prottasha.school/admission {% endblock %}
+{% block og_description %} Apply for admission to Prottasha Model School for quality education and excellent facilities. {% endblock %}
+{% block og_image %}/images/admissions-og-image.jpg{% endblock %} 
+
+{% block content %}
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Admissions</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Admissions 2025</h1>
+                <p>Join Prottasha Model School and embark on a journey of academic excellence, character development, and lifelong learning.</p>
+            </div>
+        </section>
+
+        <section class="admission-process">
+            <div class="container">
+                <h2>Admission Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Application Collection</h3>
+                            <p>Collect application form from school office or download from our website. Forms are available from November 1st.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Submit Application</h3>
+                            <p>Submit completed application with required documents and application fee by the deadline.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Admission Test</h3>
+                            <p>Appear for the admission test on the scheduled date. Test covers basic subjects and general knowledge.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Result & Admission</h3>
+                            <p>Check results and complete admission formalities including fee payment and document verification.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="admission-requirements">
+            <div class="container">
+                <h2>Admission Requirements</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <h3>Class VI Admission</h3>
+                        <ul>
+                            <li>Completed Class V from recognized school</li>
+                            <li>Age: 10-12 years (as of December 31, 2024)</li>
+                            <li>Satisfactory academic record</li>
+                            <li>Pass admission test</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-card">
+                        <h3>Class VII-IX Admission</h3>
+                        <ul>
+                            <li>Completed previous class with good grades</li>
+                            <li>Transfer certificate from previous school</li>
+                            <li>Academic transcript</li>
+                            <li>Pass admission test and interview</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-card">
+                        <h3>Class X Admission</h3>
+                        <ul>
+                            <li>Completed Class IX with minimum GPA 3.5</li>
+                            <li>Strong academic background</li>
+                            <li>Character certificate</li>
+                            <li>Limited seats available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="required-documents">
+            <div class="container">
+                <h2>Required Documents</h2>
+                <div class="documents-list">
+                    <div class="document-category">
+                        <h3>For All Classes</h3>
+                        <ul>
+                            <li>Completed application form</li>
+                            <li>Birth certificate (original + 2 copies)</li>
+                            <li>4 copies of recent passport-size photographs</li>
+                            <li>Application fee receipt</li>
+                            <li>Medical certificate</li>
+                        </ul>
+                    </div>
+                    <div class="document-category">
+                        <h3>Academic Documents</h3>
+                        <ul>
+                            <li>Mark sheet/certificate of last passed class</li>
+                            <li>Academic transcript (if applicable)</li>
+                            <li>Transfer certificate (for Classes VII-X)</li>
+                            <li>Character certificate from previous school</li>
+                            <li>Testimonial from previous school</li>
+                        </ul>
+                    </div>
+                    <div class="document-category">
+                        <h3>Guardian Information</h3>
+                        <ul>
+                            <li>Guardian's NID card copy</li>
+                            <li>Guardian's photograph</li>
+                            <li>Income certificate (if applicable)</li>
+                            <li>Contact information verification</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fee-structure">
+            <div class="container">
+                <h2>Fee Structure 2025</h2>
+                <div class="fee-table-container">
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Admission Fee</th>
+                                <th>Monthly Tuition</th>
+                                <th>Annual Fee</th>
+                                <th>Total (1st Year)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Class VI</td>
+                                <td>৳ 5,000</td>
+                                <td>৳ 1,200</td>
+                                <td>৳ 2,000</td>
+                                <td>৳ 21,400</td>
+                            </tr>
+                            <tr>
+                                <td>Class VII</td>
+                                <td>৳ 5,500</td>
+                                <td>৳ 1,300</td>
+                                <td>৳ 2,200</td>
+                                <td>৳ 23,300</td>
+                            </tr>
+                            <tr>
+                                <td>Class VIII</td>
+                                <td>৳ 6,000</td>
+                                <td>৳ 1,400</td>
+                                <td>৳ 2,400</td>
+                                <td>৳ 25,200</td>
+                            </tr>
+                            <tr>
+                                <td>Class IX</td>
+                                <td>৳ 6,500</td>
+                                <td>৳ 1,500</td>
+                                <td>৳ 2,600</td>
+                                <td>৳ 27,100</td>
+                            </tr>
+                            <tr>
+                                <td>Class X</td>
+                                <td>৳ 7,000</td>
+                                <td>৳ 1,600</td>
+                                <td>৳ 2,800</td>
+                                <td>৳ 29,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="fee-notes">
+                    <h4>Important Notes:</h4>
+                    <ul>
+                        <li>Application fee: ৳ 500 (non-refundable)</li>
+                        <li>Fees are subject to annual revision</li>
+                        <li>Additional charges for books, uniform, and activities</li>
+                        <li>Scholarship available for meritorious students</li>
+                        <li>Payment can be made monthly or quarterly</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="important-dates">
+            <div class="container">
+                <h2>Important Dates 2025</h2>
+                <div class="dates-grid">
+                    <div class="date-card">
+                        <div class="date">Nov 1, 2024</div>
+                        <div class="event">Application forms available</div>
+                    </div>
+                    <div class="date-card">
+                        <div class="date">Dec 10, 2024</div>
+                        <div class="event">Application deadline</div>
+                    </div>
+                    <div class="date-card">
+                        <div class="date">Dec 15, 2024</div>
+                        <div class="event">Admission test</div>
+                    </div>
+                    <div class="date-card">
+                        <div class="date">Dec 20, 2024</div>
+                        <div class="event">Results published</div>
+                    </div>
+                    <div class="date-card">
+                        <div class="date">Dec 25, 2024</div>
+                        <div class="event">Admission confirmation deadline</div>
+                    </div>
+                    <div class="date-card">
+                        <div class="date">Jan 2, 2025</div>
+                        <div class="event">Classes begin</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-forms">
+            <div class="container">
+                <h2>Download Forms</h2>
+                <div class="forms-grid">
+                    <div class="form-card">
+                        <div class="form-icon">📄</div>
+                        <h3>Admission Application Form</h3>
+                        <p>Complete application form for all classes</p>
+                        <a href="#" class="download-btn" download>Download PDF</a>
+                    </div>
+                    <div class="form-card">
+                        <div class="form-icon">📋</div>
+                        <h3>Admission Guidelines</h3>
+                        <p>Detailed admission process and requirements</p>
+                        <a href="#" class="download-btn" download>Download PDF</a>
+                    </div>
+                    <div class="form-card">
+                        <div class="form-icon">📊</div>
+                        <h3>Fee Structure</h3>
+                        <p>Complete fee structure and payment details</p>
+                        <a href="#" class="download-btn" download>Download PDF</a>
+                    </div>
+                    <div class="form-card">
+                        <div class="form-icon">📝</div>
+                        <h3>Syllabus for Admission Test</h3>
+                        <p>Test syllabus and sample questions</p>
+                        <a href="#" class="download-btn" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="admission-contact">
+            <div class="container">
+                <h2>Contact for Admission</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Admission Office</h3>
+                        <p><strong>Phone:</strong> 01940077100</p>
+                        <p><strong>Email:</strong> admission@prottashaschool.edu.bd</p>
+                        <p><strong>Office Hours:</strong> 9:00 AM - 4:00 PM (Sunday to Thursday)</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Visit Our Campus</h3>
+                        <p><strong>Address:</strong> Mahmudpur (Pakarmatha), Fatulla, Narayanganj</p>
+                        <p><strong>Campus Tour:</strong> Available on weekdays</p>
+                        <p><strong>Appointment:</strong> Call ahead to schedule</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+{% endblock %}

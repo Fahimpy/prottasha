@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Us - Prottasha Model School | Our History & Mission {% endblock %}
+{% block meta_description %} Learn about Prottasha Model School's history, mission, vision, facilities, and management committee. Discover our commitment to educational excellence. {% endblock %}
+{% block og_title %} About Us - Prottasha Model School {% endblock %}
+{% block canonical_url %} https://prottasha.school/about {% endblock %}
+{% block og_description %} Learn about our history, mission, and commitment to educational excellence. {% endblock %}
+{% block og_image %}/images/about-og-image.jpg{% endblock %} 
+
+
+
+{% block content %} 
+   <!--  Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>About Us</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>About Prottasha Model School</h1>
+                <p>Discover our journey of educational excellence, our mission to nurture young minds, and our commitment to building a brighter future for our students.</p>
+            </div>
+        </section>
+
+        <section class="school-history">
+            <div class="container">
+                <div class="history-content">
+                    <div class="history-text">
+                        <br>
+                        <h2>Our History</h2>
+                        <p>Prottasha Model School was established in 2010 with a vision to provide quality education to the students of Fatulla, Narayanganj. Founded by a group of dedicated educators and community leaders, our school began its journey with just 50 students and has grown to become one of the most respected educational institutions in the region.</p>
+                        
+                        <p>Over the years, we have consistently maintained our commitment to academic excellence while fostering character development and moral values. Our school has produced numerous successful graduates who have gone on to excel in various fields, making significant contributions to society.</p>
+                        
+                        <p>Today, Prottasha Model School stands as a beacon of educational excellence, serving over 1000+ students from Class one to Class Ten, with a dedicated team of experienced teachers and modern facilities that support comprehensive learning.</p>
+                    </div>
+                    <div class="history-image">
+                        <img src="{% static 'images/school_building.jpg' %}" alt="Prottasha Model School Building">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <div class="mission-card">
+                        <div class="card-icon"></div>
+                        <h3>🎯 Our Mission</h3>
+                        <p>To provide quality education that nurtures intellectual growth, character development, and moral values, preparing students to become responsible citizens and future leaders who contribute positively to society.</p>
+                    </div><br>
+                    <div class="vision-card">
+                        <div class="card-icon"></div>
+                        <h3>🌟 Our Vision</h3>
+                        <p>To be recognized as a leading educational institution that empowers students with knowledge, skills, and values necessary for success in an ever-changing world, while maintaining the highest standards of academic excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<br>
+        <section class="core-values">
+            <div class="container">
+                <h2>Our Core Values</h2>
+                <br>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h4>📚 Academic Excellence</h4>
+                        <p>We strive for the highest standards in teaching and learning, ensuring every student reaches their full potential.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>🤝 Integrity</h4>
+                        <p>We uphold honesty, transparency, and ethical behavior in all our interactions and decisions.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>🌱 Growth Mindset</h4>
+                        <p>We encourage continuous learning, innovation, and adaptation to meet evolving educational needs.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>❤️ Compassion</h4>
+                        <p>We foster a caring and supportive environment where every individual is valued and respected.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>🏆 Excellence</h4>
+                        <p>We pursue excellence in all aspects of education, from curriculum delivery to student support services.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>🌍 Community</h4>
+                        <p>We build strong partnerships with families and the community to support student success and development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<br>
+        <section class="facilities">
+            <div class="container">
+                <h2>Our Facilities</h2>
+                <br>
+                <div class="facilities-grid">
+                    <div class="facility-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Modern Classrooms">
+                        <div class="facility-content">
+                            <h4>Modern Classrooms</h4>
+                            <p>Well-ventilated, spacious classrooms equipped with modern teaching aids and comfortable seating arrangements.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Science Laboratory">
+                        <div class="facility-content">
+                            <h4>Science Laboratory</h4>
+                            <p>Fully equipped physics, chemistry, and biology labs with modern instruments for hands-on learning.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Computer Lab">
+                        <div class="facility-content">
+                            <h4>Computer Lab</h4>
+                            <p>State-of-the-art computer lab with high-speed internet and latest software for digital literacy.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Library">
+                        <div class="facility-content">
+                            <h4>Library</h4>
+                            <p>Extensive collection of books, journals, and digital resources to support research and reading habits.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Sports Ground">
+                        <div class="facility-content">
+                            <h4>Sports Ground</h4>
+                            <p>Large playground and sports facilities for cricket, football, volleyball, and other outdoor activities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<br>
+        <section class="management-committee">
+            <div class="container">
+                <h2>Management Committee</h2>
+                <br>
+                <div class="committee-grid">
+                    <div class="committee-member">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Chairman">
+                        <h4>Mr. Anis Ahmed</h4>
+                        <p class="position">Chairman</p>
+                        <p class="bio">Retired government official with 30+ years of experience in Government services.</p>
+                    </div>
+                    <div class="committee-member">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Secretary">
+                        <h4>Mr. Shohag Hasan</h4>
+                        <p class="position">Secretary</p>
+                        <p class="bio">Present principal with extensive experience in educational management and curriculum development.</p>
+                    </div>
+                    <div class="committee-member">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Teachers' representative">
+                        <h4>Mr. Kawsar Ahmed</h4>
+                        <p class="position">Teachers' representative</p>
+                        <p class="bio">An expert Math teacher of Prottasha Model School.`</p>
+                    </div>
+                                        <div class="committee-member">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Guardians' representative">
+                        <h4>Mr. Maruf Ahmed</h4>
+                        <p class="position">Guardians' representative</p>
+                        <p class="bio">A businessman with a passion for education.</p>
+                    </div>
+
+                    <div class="committee-member">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Enthusiast Member">
+                        <h4>Mr. Zakir Hossain</h4>
+                        <p class="position">Enthusiast Member</p>
+                        <p class="bio">Medical doctor and education advocate focused on student health and welfare programs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<br>
+<!-- School Statistics Section -->
+<section class="school-statistics">
+  <div class="container">
+    <h2 class="section-title">School at a Glance</h2>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="350">0</div>
+        <div class="stat-label">Students</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="18">0</div>
+        <div class="stat-label">Teachers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="13">0</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Pass Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="1000">0</div>
+        <div class="stat-label">Alumni</div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+   <script>
+// ======= Animated Counter Effect =======
+const counters = document.querySelectorAll('.stat-number');
+const speed = 80; // Lower = faster
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const suffix = counter.getAttribute('data-suffix') || ''; // Check if suffix exists
+      const count = +counter.innerText;
+      const inc = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        requestAnimationFrame(updateCount);
+      } else {
+        // Add + for large numbers, or suffix (like %)
+        const finalText = suffix ? `${target}${suffix}` : target + (target >= 101 && target < 1000 ? '+' : '');
+        counter.innerText = finalText;
+      }
+    };
+    updateCount();
+  });
+};
+
+// Trigger animation when section is visible
+const section = document.querySelector('.school-statistics');
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    animateCounters();
+    observer.disconnect();
+  }
+});
+observer.observe(section);
+</script>
+
+
+    {% endblock %}
+

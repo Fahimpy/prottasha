@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block title %} Our Teachers - Prottasha Model School | Experienced Faculty {% endblock %}
+{% block meta_description %} Meet our dedicated and experienced teachers at Prottasha Model School. Qualified educators committed to student success and academic excellence. {% endblock %}
+{% block og_title %} Our Teachers - Prottasha Model School {% endblock %}
+{% block canonical_url %} https://prottasha.school/teachers {% endblock %}
+{% block og_description %} Meet our dedicated and experienced teachers committed to student success. {% endblock %}
+{% block og_image %}/images/teachers-og-image.jpg{% endblock %} 
+
+{% block content %} 
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Teachers</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Dedicated Teachers Panel</h1>
+                <p>Meet the experienced and qualified teachers who are committed to nurturing young minds and fostering academic excellence at Prottasha Model School.</p>
+            </div>
+        </section>
+
+        <section class="teacher-search">
+            <div class="container">
+                <div class="search-controls">
+                    <input type="text" id="teacherSearch" placeholder="Search teachers by name or subject..." class="search-input">
+                    <select id="subjectFilter" class="filter-select">
+                        <option value="">All Subjects</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="science">Science</option>
+                        <option value="english">English</option>
+                        <option value="bangla">Bangla</option>
+                        <option value="social-science">Social Science</option>
+                        <option value="ict">ICT</option>
+                        <option value="islam">Islam</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="teachers-listing">
+            <div class="container">
+                <div class="teachers-grid" id="teachersGrid">
+                    {% for teacher in teachers %}
+
+                    <div class="teacher-card" data-subject="{{teacher.subject|lower}}">
+                        {% if teacher.photo %}
+                        <img src="{{teacher.photo.url}}" alt="{{teacher.name}}">
+                        {% else %}
+                        <img src="/placeholder.svg?height=250&width=250" alt="{{teacher.name}}">
+                        {% endif %} 
+                        <div class="teacher-info">
+                            <h3>{{teacher.name}}</h3>
+                            <p class="designation">{{teacher.designation}}</p>
+                            <p class="subject">{{teacher.subject}} Teacher</p>
+                            <p class="experience">{{teacher.experience}} of experience</p>
+                            <div class="teacher-contact">
+                                <p>📧 {{teacher.email}}</p>
+                            </div>
+                            <a href="{% url 'teacher_detail' teacher.tslug %}" class="teacher-profile-btn">View Profile</a>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %} 
+
+{% block js_script %}<script src="{% static 'js/teachers.js' %}" defer></script> {% endblock %}

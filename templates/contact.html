@@ -1,0 +1,220 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} Contact Us {% endblock %}
+{% block meta_description %} Contact Prottasha Model School for admissions, inquiries, and information. Find our location, phone numbers, email addresses, and contact form. {% endblock %}
+{% block og_title %} Contact Us - Prottasha Model School {% endblock %}
+{% block canonical_url %} https://prottasha.school/contact {% endblock %}
+{% block og_description %} Get in touch with Prottasha Model School for admissions and inquiries. {% endblock %}
+{% block og_image %}/images/contact-og-image.jpg{% endblock %} 
+
+{% block content %}
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Contact Us</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We're here to help! Get in touch with us for admissions, inquiries, or any information about Prottasha Model School.</p>
+            </div>
+        </section>
+
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:01940077100">01940077100</a></p>
+                        <p class="contact-note">Available: 9:00 AM - 4:00 PM</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:school.prottasha@gmail.com">school.prottasha@gmail.com</a></p>
+                        <p class="contact-note">We'll respond within 24 hours</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Address</h3>
+                        <p>Mahmudpur (Pakarmatha)<br>Fatulla, Narayanganj<br>Bangladesh</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🕒</div>
+                        <h3>Office Hours</h3>
+                        <p>Sunday - Thursday<br>9:00 AM - 4:00 PM</p>
+                        <p class="contact-note">Friday & Saturday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Send us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="admission">Admission Inquiry</option>
+                                <option value="academic">Academic Information</option>
+                                <option value="facilities">Facilities & Infrastructure</option>
+                                <option value="fees">Fees & Payment</option>
+                                <option value="transport">Transportation</option>
+                                <option value="complaint">Complaint/Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates and announcements
+                            </label>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Find Us on Map</h2>
+                <div class="map-container-large">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.6947564136453!2d90.48906331119815!3d23.68687157862504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b6de94faaaab%3A0x5d84c860334a9aaf!2sProttasha%20Model%20School!5e0!3m2!1sen!2sbd!4v1759347691922!5m2!1sen!2sbd"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Prottasha Model School Location">
+                    </iframe>
+                </div>
+                <div class="map-info">
+                    <h3>Directions</h3>
+                    <p>Prottasha Model School is located in Mahmudpur (Pakarmatha), Fatulla, Narayanganj. The school is easily accessible by public transport and private vehicles. Parking facilities are available on campus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="department-contacts">
+            <div class="container">
+                <h2>Department Contacts</h2>
+                <div class="departments-grid">
+                    <div class="department-card">
+                        <h4>Admissions Office</h4>
+                        <p><strong>Phone:</strong> 01940077100</p>
+                        <p><strong>Email:</strong> admission@prottashaschool.edu.bd</p>
+                        <p><strong>Contact Person:</strong> Mr. Rahman (Admission Officer)</p>
+                    </div>
+                    <div class="department-card">
+                        <h4>Academic Office</h4>
+                        <p><strong>Phone:</strong> 01940077100</p>
+                        <p><strong>Email:</strong> academic@prottashaschool.edu.bd</p>
+                        <p><strong>Contact Person:</strong> Mrs. Sultana (Academic Coordinator)</p>
+                    </div>
+                    <div class="department-card">
+                        <h4>Accounts Department</h4>
+                        <p><strong>Phone:</strong> 01940077100</p>
+                        <p><strong>Email:</strong> accounts@prottashaschool.edu.bd</p>
+                        <p><strong>Contact Person:</strong> Mr. Karim (Accountant)</p>
+                    </div>
+                    <div class="department-card">
+                        <h4>Principal's Office</h4>
+                        <p><strong>Phone:</strong> 01940077100</p>
+                        <p><strong>Email:</strong> principal@prottashaschool.edu.bd</p>
+                        <p><strong>Contact Person:</strong> Md. Abdul Rahman (Headmaster)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What are the school timings?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>School hours are from 8:00 AM to 2:00 PM, Sunday through Thursday. Friday and Saturday are weekends.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>How can I apply for admission?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can collect the admission form from our school office or download it from our website. Submit the completed form with required documents and fees by the deadline.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Do you provide transportation?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide school bus services to various areas in Narayanganj. Please contact our office for route details and fees.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>What is the medium of instruction?</h4>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The medium of instruction is Bangla, following the national curriculum. English is taught as a compulsory subject with emphasis on communication skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+{% endblock %} 
+
+
+ {% block js_script %}<script src="{% static 'js/contact.js' %}" defer></script>{% endblock %}

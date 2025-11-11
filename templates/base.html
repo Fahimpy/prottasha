@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="keywords" content="Prottasha Model School, school in Fatulla, education Narayanganj, secondary school Bangladesh, quality education, academic excellence">
+    <meta name="author" content="Fahim Hossain">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="{% block canonical_url %}{% endblock %}">
+
+    <!--Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prottasha.school">
+    <meta property="og:title" content="{% block og_title %} {% endblock %}">
+    <meta property="og:description" content="{% block og_description %} {% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% endblock %}">
+
+    <!-- Twitter -->
+    {% block twitter_codes %}{% endblock %}
+
+    <!-- Schema.org markup for Educational Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Prottasha Model School",
+      "alternateName": "Prottasha School",
+      "description": "Quality education with experienced teachers and modern facilities in Fatulla, Narayanganj. Offering classes from VI to X with excellent academic results.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mahmudpur (Pakarmatha)",
+        "addressLocality": "Fatulla",
+        "addressRegion": "Narayanganj",
+        "postalCode": "1420",
+        "addressCountry": "BD"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "23.687097553004655",
+        "longitude": "90.49191181703209"
+      },
+      "telephone": "01940077100",
+      "email": "school.prottasha@gmail.com",
+      "url": "https://prottashaschool.edu.bd",
+      "logo": "https://prottashaschool.edu.bd/images/logo.png",
+      "image": "https://prottashaschool.edu.bd/images/school-building.jpg",
+      "foundingDate": "2012",
+      "sameAs": [
+        "https://web.facebook.com/prottasha.school"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Academic Programs",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Course",
+              "name": "Primary & Secondary Education (Class I-X)",
+              "description": "Complete primary and secondary education with focus on academic excellence"
+            }
+          }
+        ]
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Narayanganj, Bangladesh"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+     <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="headerleft">
+                <div class="logo">
+                    <img src="{{sdata.logo.url}}" alt="Prottasha Model School Logo">
+                </div>
+                <div class="school-name">
+                    <h1>Prottasha Model School</h1>
+                    <p>Excellence in Education</p>
+                </div>
+                </div>
+                 <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="{% url 'home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
+
+                    <li><a href="{% url 'admission' %}" class="nav-link {% if request.resolver_match.url_name == 'admission' %}active{% endif %}">Admissions</a></li>
+                    <li><a href="{% url 'results' %}" class="nav-link {% if request.resolver_match.url_name == 'results' %}active{% endif %}">Results</a></li>
+                    <li><a href="{% url 'teachers' %}" class="nav-link {% if request.resolver_match.url_name == 'teachers' %}active{% endif %}">Teachers</a></li>
+                  <!--  <li><a href="{% url 'jobs' %}" class="nav-link {% if request.resolver_match.url_name == 'jobs' %}active{% endif %}">Jobs</a></li>   -->
+                    <li><a href="{% url 'contact' %}" class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+                </ul>
+
+
+
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+
+
+            </div>
+        </div>
+    </header>
+
+{% block content %}
+{% endblock %}
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <p><strong>Phone:</strong> <a href="tel:{{sdata.mobile_no}}">{{sdata.mobile_no}}</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:{{sdata.email}}">{{sdata.email}}</a></p>
+                        <p><strong>Address:</strong> {{sdata.address}}</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'admission' %}">Admissions</a></li>
+                        <li><a href="{% url 'results' %}">Results</a></li>
+                        <li><a href="{% url 'notices' %}">Notices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/prottasha.school" target="_blank" rel="noopener" aria-label="Facebook">📘 Facebook</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Location</h3>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.6947564136453!2d90.48906331119815!3d23.68687157862504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b6de94faaaab%3A0x5d84c860334a9aaf!2sProttasha%20Model%20School!5e0!3m2!1sen!2sbd!4v1759347691922!5m2!1sen!2sbd"
+                            width="100%" 
+                            height="150" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Prottasha Model School Location">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Prottasha Model School. All rights reserved.</p>
+                <p>Developed by <a href="https://nextpath.agency" target="_blank" rel="noopener">NextPath</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+   <!--  JavaScript -->
+    <script src="{% static 'js/main.js' %}" defer></script>
+    {% block js_script %}{% endblock %}
+</body>
+</html>
+

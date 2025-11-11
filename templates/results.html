@@ -1,0 +1,397 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Results - Prottasha Model School | Academic Results and Achievements {% endblock %}
+{% block meta_description %} View academic results, examination outcomes, and student achievements at Prottasha Model School. Access result archives by year and class. {% endblock %}
+{% block og_title %} Results - Prottasha Model School {% endblock %}
+{% block canonical_url %} https://prottasha.school/results {% endblock %}
+{% block og_description %} View academic results and student achievements at Prottasha Model School. {% endblock %}
+{% block og_image %}/images/results-og-image.jpg{% endblock %} 
+
+{% block content %}
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Results</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Academic Results</h1>
+                <p>Explore our students' academic achievements and examination results. We take pride in our consistent excellence and outstanding performance.</p>
+            </div>
+        </section>
+
+        <section class="results-highlights">
+            <div class="container">
+                <h2>Latest Results Highlights</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🏆</div>
+                        <h3>SSC 2024</h3>
+                        <div class="highlight-stats">
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Pass Rate</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">85%</span>
+                                <span class="stat-label">A+ Grade</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🥇</div>
+                        <h3>JSC 2024</h3>
+                        <div class="highlight-stats">
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Pass Rate</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">A+ Grade</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">📊</div>
+                        <h3>Annual Exam 2024</h3>
+                        <div class="highlight-stats">
+                            <div class="stat">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Pass Rate</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">4.8</span>
+                                <span class="stat-label">Avg GPA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-archive">
+            <div class="container">
+                <h2>Results Archive</h2>
+                <div class="archive-filters">
+                    <select id="yearFilter" class="filter-select">
+                        <option value="">Select Year</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                    <select id="examFilter" class="filter-select">
+                        <option value="">Select Examination</option>
+                        <option value="ssc">SSC</option>
+                        <option value="jsc">JSC</option>
+                        <option value="annual">Annual Examination</option>
+                        <option value="half-yearly">Half-Yearly Examination</option>
+                    </select>
+                    <select id="classFilter" class="filter-select">
+                        <option value="">Select Class</option>
+                        <option value="10">Class X</option>
+                        <option value="9">Class IX</option>
+                        <option value="8">Class VIII</option>
+                        <option value="7">Class VII</option>
+                        <option value="6">Class VI</option>
+                    </select>
+                </div>
+
+                <div class="results-grid" id="resultsGrid">
+                    <div class="result-card" data-year="2024" data-exam="ssc" data-class="10">
+                        <div class="result-header">
+                            <h3>SSC Examination 2024</h3>
+                            <span class="result-date">May 2024</span>
+                        </div>
+                        <div class="result-stats">
+                            <div class="stat-row">
+                                <span>Total Students:</span>
+                                <span>120</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Passed:</span>
+                                <span>120 (100%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>A+ Grade:</span>
+                                <span>102 (85%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Average GPA:</span>
+                                <span>4.92</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="view-details-btn">View Details</a>
+                            <a href="#" class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="result-card" data-year="2024" data-exam="jsc" data-class="8">
+                        <div class="result-header">
+                            <h3>JSC Examination 2024</h3>
+                            <span class="result-date">December 2024</span>
+                        </div>
+                        <div class="result-stats">
+                            <div class="stat-row">
+                                <span>Total Students:</span>
+                                <span>135</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Passed:</span>
+                                <span>135 (100%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>A+ Grade:</span>
+                                <span>128 (95%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Average GPA:</span>
+                                <span>4.95</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="view-details-btn">View Details</a>
+                            <a href="#" class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="result-card" data-year="2024" data-exam="annual" data-class="9">
+                        <div class="result-header">
+                            <h3>Annual Examination 2024 - Class IX</h3>
+                            <span class="result-date">November 2024</span>
+                        </div>
+                        <div class="result-stats">
+                            <div class="stat-row">
+                                <span>Total Students:</span>
+                                <span>140</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Passed:</span>
+                                <span>137 (98%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>A+ Grade:</span>
+                                <span>115 (82%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Average GPA:</span>
+                                <span>4.75</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="view-details-btn">View Details</a>
+                            <a href="#" class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="result-card" data-year="2023" data-exam="ssc" data-class="10">
+                        <div class="result-header">
+                            <h3>SSC Examination 2023</h3>
+                            <span class="result-date">May 2023</span>
+                        </div>
+                        <div class="result-stats">
+                            <div class="stat-row">
+                                <span>Total Students:</span>
+                                <span>115</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Passed:</span>
+                                <span>115 (100%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>A+ Grade:</span>
+                                <span>92 (80%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Average GPA:</span>
+                                <span>4.85</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="view-details-btn">View Details</a>
+                            <a href="#" class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="result-card" data-year="2023" data-exam="jsc" data-class="8">
+                        <div class="result-header">
+                            <h3>JSC Examination 2023</h3>
+                            <span class="result-date">December 2023</span>
+                        </div>
+                        <div class="result-stats">
+                            <div class="stat-row">
+                                <span>Total Students:</span>
+                                <span>130</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Passed:</span>
+                                <span>130 (100%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>A+ Grade:</span>
+                                <span>117 (90%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Average GPA:</span>
+                                <span>4.88</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="view-details-btn">View Details</a>
+                            <a href="#" class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <div class="result-card" data-year="2022" data-exam="ssc" data-class="10">
+                        <div class="result-header">
+                            <h3>SSC Examination 2022</h3>
+                            <span class="result-date">May 2022</span>
+                        </div>
+                        <div class="result-stats">
+                            <div class="stat-row">
+                                <span>Total Students:</span>
+                                <span>108</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Passed:</span>
+                                <span>108 (100%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>A+ Grade:</span>
+                                <span>81 (75%)</span>
+                            </div>
+                            <div class="stat-row">
+                                <span>Average GPA:</span>
+                                <span>4.72</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <a href="#" class="view-details-btn">View Details</a>
+                            <a href="#" class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-performers">
+            <div class="container">
+                <h2>Top Performers 2024</h2>
+                <div class="performers-grid">
+                    <div class="performer-card">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Student">
+                        <h4>Fatima Rahman</h4>
+                        <p class="achievement">SSC 2024 - GPA 5.00</p>
+                        <p class="details">All A+ in all subjects</p>
+                    </div>
+                    <div class="performer-card">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Student">
+                        <h4>Mohammad Ali</h4>
+                        <p class="achievement">SSC 2024 - GPA 5.00</p>
+                        <p class="details">Science Group Topper</p>
+                    </div>
+                    <div class="performer-card">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Student">
+                        <h4>Rashida Khatun</h4>
+                        <p class="achievement">JSC 2024 - GPA 5.00</p>
+                        <p class="details">Highest marks in Mathematics</p>
+                    </div>
+                    <div class="performer-card">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Student">
+                        <h4>Abdul Karim</h4>
+                        <p class="achievement">JSC 2024 - GPA 5.00</p>
+                        <p class="details">Excellence in Science subjects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subject-performance">
+            <div class="container">
+                <h2>Subject-wise Performance (SSC 2024)</h2>
+                <div class="performance-chart">
+                    <div class="subject-bar">
+                        <div class="subject-name">Bangla</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 92%"></div>
+                        </div>
+                        <div class="percentage">92%</div>
+                    </div>
+                    <div class="subject-bar">
+                        <div class="subject-name">English</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 88%"></div>
+                        </div>
+                        <div class="percentage">88%</div>
+                    </div>
+                    <div class="subject-bar">
+                        <div class="subject-name">Mathematics</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%"></div>
+                        </div>
+                        <div class="percentage">95%</div>
+                    </div>
+                    <div class="subject-bar">
+                        <div class="subject-name">Science</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%"></div>
+                        </div>
+                        <div class="percentage">90%</div>
+                    </div>
+                    <div class="subject-bar">
+                        <div class="subject-name">Social Science</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 87%"></div>
+                        </div>
+                        <div class="percentage">87%</div>
+                    </div>
+                    <div class="subject-bar">
+                        <div class="subject-name">Religion</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 98%"></div>
+                        </div>
+                        <div class="percentage">98%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
+
+{% block js_script %}<script src="{% static 'js/results.js' %}" defer></script>
+<script>
+const filters = document.querySelectorAll('.filter-select');
+const resultCards = document.querySelectorAll('.result-card');
+
+filters.forEach(select => {
+  select.addEventListener('change', filterResults);
+});
+
+function filterResults() {
+  const year = document.getElementById('yearFilter').value;
+  const exam = document.getElementById('examFilter').value;
+  const cls = document.getElementById('classFilter').value;
+
+  resultCards.forEach(card => {
+    const match =
+      (!year || card.dataset.year === year) &&
+      (!exam || card.dataset.exam === exam) &&
+      (!cls || card.dataset.class === cls);
+
+    card.style.display = match ? 'block' : 'none';
+  });
+}
+</script>
+
+
+{% endblock %} 

@@ -1,0 +1,67 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} {{notice.title}}- Prottasha Model School {% endblock %}
+{% block meta_description %} {{notice.content|truncatewords:20}} {% endblock %}
+{% block og_title %} {{notice.title}}- Prottasha Model School {% endblock %}
+{% block canonical_url %} https://prottasha.school/notices {% endblock %}
+{% block og_description %} {{notice.content|truncatewords:20}} {% endblock %}
+{% block og_image %}/images/notices-og-image.jpg{% endblock %} 
+
+{% block content %}
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'notices' %}">Notices</a></li>
+                <li id="noticeTitleBreadcrumb">Notice Details</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <section class="notice-details-section">
+            <div class="container">
+                <div class="notice-content" id="noticeContent">
+
+                <article class="notice-details">
+    <header class="notice-details-header">
+        <div class="notice-meta">
+            <span class="notice-category {{notice.topic|lower}}">{{notice.topic}}</span>
+            <time datetime="{{ notice.created_at|date:'Y-m-d' }}">{{ notice.created_at|date:'F j, Y' }}</time>
+            <span class="notice-priority {{ notice.priority|lower|slugify }}">{{ notice.priority }}</span>
+        </div>
+        <h1>{{ notice.title }}</h1>
+    </header>
+
+    <div class="notice-body">
+        {{ notice.content|safe }}
+    </div>
+
+    {% if notice.attachments.exists %}
+    <div class="notice-attachments">
+        <h3>Attachments</h3>
+        <div class="attachments-list">
+            {% for attachment in notice.attachments.all %}
+            <a href="{{ attachment.file.url }}" target="_blank">
+                {{ attachment.name }} ({{ attachment.type }})
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="notice-actions">
+        <a href="{% url 'notices' %}"class="back-btn">← Back to Notices</a>
+        <button onclick="window.print()" class="print-btn">🖨️ Print Notice</button>
+        <button onclick="shareNotice()" class="share-btn">📤 Share</button>
+    </div>
+</article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
+

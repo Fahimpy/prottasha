@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Job Circular - Prottasha Model School | Teaching Positions Available {% endblock %}
+{% block meta_description %} Current job openings at Prottasha Model School. Apply for teaching positions and administrative roles. Join our team of dedicated educators. {% endblock %}
+{% block og_title %} Job Circular - Prottasha Model School {% endblock %}
+{% block canonical_url %} https://prottasha.school/jobs {% endblock %}
+{% block og_description %} Current job openings at Prottasha Model School. Apply for teaching positions and administrative roles. {% endblock %}
+{% block og_image %}images/school-building.jpg{% endblock %} 
+
+
+{% block twitter_codes %}
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Job Circular - Prottasha Model School">
+    <meta name="twitter:description" content="Current job openings at Prottasha Model School. Apply for teaching positions and administrative roles.">
+    <meta name="twitter:image" content="images/school-building.jpg">
+
+    {% endblock %}
+    
+{% block content %}
+    
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="{% url 'home' %}">Home</a>
+            <span>/</span>
+            <span>Job Circular</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1>Job Circular</h1>
+                <p>Join our team of dedicated educators and make a difference in students' lives</p>
+            </section>
+
+            <!-- Current Openings -->
+            <section class="job-listings">
+                <h2>Current Job Openings</h2>
+                
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>Mathematics Teacher</h3>
+                        <span class="job-type">Full Time</span>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Subject:</strong> Mathematics (Class VI-X)</p>
+                        <p><strong>Experience:</strong> Minimum 2 years teaching experience</p>
+                        <p><strong>Qualification:</strong> Bachelor's/Master's in Mathematics or related field</p>
+                        <p><strong>Salary:</strong> BDT 25,000 - 35,000 per month</p>
+                        <p><strong>Application Deadline:</strong> December 31, 2024</p>
+                    </div>
+                    <div class="job-description">
+                        <h4>Job Responsibilities:</h4>
+                        <ul>
+                            <li>Teach Mathematics to secondary level students</li>
+                            <li>Prepare lesson plans and teaching materials</li>
+                            <li>Assess student progress and provide feedback</li>
+                            <li>Participate in school activities and meetings</li>
+                        </ul>
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Strong knowledge of Mathematics curriculum</li>
+                            <li>Excellent communication skills</li>
+                            <li>Ability to motivate and inspire students</li>
+                            <li>Computer literacy preferred</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="download-btn">Download PDF</button>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>English Teacher</h3>
+                        <span class="job-type">Full Time</span>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Subject:</strong> English (Class VI-X)</p>
+                        <p><strong>Experience:</strong> Minimum 3 years teaching experience</p>
+                        <p><strong>Qualification:</strong> Bachelor's/Master's in English Literature or related field</p>
+                        <p><strong>Salary:</strong> BDT 28,000 - 38,000 per month</p>
+                        <p><strong>Application Deadline:</strong> January 15, 2025</p>
+                    </div>
+                    <div class="job-description">
+                        <h4>Job Responsibilities:</h4>
+                        <ul>
+                            <li>Teach English language and literature</li>
+                            <li>Develop students' reading, writing, and speaking skills</li>
+                            <li>Organize literary activities and competitions</li>
+                            <li>Maintain student records and progress reports</li>
+                        </ul>
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Excellent command of English language</li>
+                            <li>Creative teaching methods</li>
+                            <li>Experience in curriculum development preferred</li>
+                            <li>Ability to work in a team environment</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="download-btn">Download PDF</button>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>Administrative Assistant</h3>
+                        <span class="job-type">Full Time</span>
+                    </div>
+                    <div class="job-details">
+                        <p><strong>Department:</strong> Administration</p>
+                        <p><strong>Experience:</strong> 1-2 years office experience</p>
+                        <p><strong>Qualification:</strong> Bachelor's degree in any field</p>
+                        <p><strong>Salary:</strong> BDT 20,000 - 25,000 per month</p>
+                        <p><strong>Application Deadline:</strong> January 10, 2025</p>
+                    </div>
+                    <div class="job-description">
+                        <h4>Job Responsibilities:</h4>
+                        <ul>
+                            <li>Handle administrative tasks and documentation</li>
+                            <li>Assist in student admission process</li>
+                            <li>Maintain school records and databases</li>
+                            <li>Coordinate with parents and staff</li>
+                        </ul>
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Proficiency in MS Office applications</li>
+                            <li>Good organizational skills</li>
+                            <li>Excellent communication skills in Bengali and English</li>
+                            <li>Attention to detail</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="apply-btn">Apply Now</button>
+                        <button class="download-btn">Download PDF</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Application Process -->
+            <section class="application-process">
+                <h2>How to Apply</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Prepare Documents</h3>
+                        <p>Gather your CV, educational certificates, experience letters, and passport-size photographs.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Submit Application</h3>
+                        <p>Send your complete application to our email or visit the school office during working hours.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Interview Process</h3>
+                        <p>Shortlisted candidates will be called for written test and interview.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Final Selection</h3>
+                        <p>Selected candidates will be notified within 7 days of the interview.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact for Applications -->
+            <section class="application-contact">
+                <h2>Application Contact</h2>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:hr.prottasha@gmail.com">hr.prottasha@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:01940077100">01940077100</a></p>
+                    <p><strong>Office Hours:</strong> Sunday to Thursday, 9:00 AM - 4:00 PM</p>
+                    <p><strong>Address:</strong> Mahmudpur (Pakarmatha), Fatulla, Narayanganj</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+{% endblock %}
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+
+</body>
+</html>
+{% block js_script %}
+    <script src="{% static 'js/seo-analytics.js' %}" defer></script>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "Mathematics Teacher",
+      "description": "We are seeking a qualified Mathematics teacher for secondary level classes. The ideal candidate should have strong subject knowledge and teaching experience.",
+      "hiringOrganization": {
+        "@type": "EducationalOrganization",
+        "name": "Prottasha Model School",
+        "sameAs": "https://prottashaschool.edu.bd"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Mahmudpur (Pakarmatha)",
+          "addressLocality": "Fatulla",
+          "addressRegion": "Narayanganj",
+          "addressCountry": "BD"
+        }
+      },
+      "datePosted": "2024-12-01",
+      "validThrough": "2024-12-31",
+      "employmentType": "FULL_TIME",
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "BDT",
+        "value": {
+          "@type": "QuantitativeValue",
+          "minValue": 25000,
+          "maxValue": 35000,
+          "unitText": "MONTH"
+        }
+      }
+    }
+    </script>
+{% endblock %}

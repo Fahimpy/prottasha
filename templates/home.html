@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Prottasha Model School - Excellence in Education {% endblock %}
+{% block meta_description %} Prottasha Model School in Mahmudpur, Fatulla, Narayanganj offers quality education with experienced teachers, modern facilities, and excellent academic results. {% endblock %}
+{% block canonical_url %} https://prottasha.school {% endblock %}
+{% block og_title %} Prottasha Model School - Excellence in Education {% endblock %}
+{% block og_description %} Quality education with experienced teachers and modern facilities in Fatulla, Narayanganj. {% endblock %}
+{% block og_image %}/images/school-og-image.jpg{% endblock %} 
+
+    {% block twitter_codes %}     
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://prottashaschool.edu.bd/">
+    <meta property="twitter:title" content="Prottasha Model School - Excellence in Education">
+    <meta property="twitter:description" content="Quality education with experienced teachers and modern facilities in Fatulla, Narayanganj.">
+    <meta property="twitter:image" content="/images/school-og-image.jpg">
+    {% endblock %}
+
+
+
+{% block content %}
+
+    <!-- Notice Marquee -->
+    <div class="notice-marquee">
+        <div class="marquee-content">
+            {% for notice in hnotices %}
+            <span><a href="{% url 'notice_detail' notice.slug %}">📢 {{notice.title}}</a></span>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <main>
+
+
+  <!-- Hero + Notice Container -->
+  <section class="hero-notice-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-slider">
+        <div class="slide active">
+          <img src="{% static 'images/school_fest.jpg' %}" alt="Prottasha Model School Campus">
+          <div class="slide-content">
+            <h2>Welcome to Prottasha Model School</h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/school_building.jpg' %}" alt="Quality Education">
+          <div class="slide-content">
+            <h2>Quality Education for All</h2>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/school_picnic.jpg' %}" alt="Modern Facilities">
+          <div class="slide-content">
+            <h2>Modern Learning Environment</h2>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="prev-btn" aria-label="Previous slide">&lt;</button>
+        <button class="next-btn" aria-label="Next slide">&gt;</button>
+      </div>
+      <div class="slider-dots">
+        <button class="dot active" data-slide="0"></button>
+        <button class="dot" data-slide="1"></button>
+        <button class="dot" data-slide="2"></button>
+      </div>
+    </div>
+
+    <!-- Notice Section -->
+    <div class="notice-section">
+      <div class="container">
+        <div class="notice-content">
+          <h3>Latest Notices</h3>
+          <div class="notice-list">
+            {% for notice in hnotices %}
+            <article class="notice-item">
+              <time datetime="{{notice.created_at|date:'M d,Y'}}">{{notice.created_at|date:'M d,Y'}}</time>
+              <h4><a href="{% url 'notice_detail' notice.slug %}">{{notice.title}}</a></h4>
+            </article>
+            {% endfor %}
+          </div>
+          <a href="{% url 'notices' %}" class="view-all-link">View All Notices</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+       <!--  Hero Section with Slider 
+        <section class="hero-section">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="/placeholder.svg?height=600&width=1200" alt="Prottasha Model School Campus">
+                    <div class="slide-content">
+                        <h2>Welcome to Prottasha Model School</h2>
+                        <p>Nurturing minds, building futures with excellence in education</p>
+                        <a href="admissions.html" class="cta-button">Apply for Admission</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/placeholder.svg?height=600&width=1200" alt="Quality Education">
+                    <div class="slide-content">
+                        <h2>Quality Education for All</h2>
+                        <p>Experienced teachers, modern facilities, and proven results</p>
+                        <a href="about.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/placeholder.svg?height=600&width=1200" alt="Modern Facilities">
+                    <div class="slide-content">
+                        <h2>Modern Learning Environment</h2>
+                        <p>State-of-the-art facilities to enhance learning experience</p>
+                        <a href="contact.html" class="cta-button">Visit Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn" aria-label="Previous slide">&lt;</button>
+                <button class="next-btn" aria-label="Next slide">&gt;</button>
+            </div>
+            <div class="slider-dots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+            </div>
+        </section>
+
+       
+        <section class="notice-section">
+            <div class="container">
+                <div class="notice-content">
+                    <h3>Latest Notices</h3>
+                    <div class="notice-list">
+                        {% for notice in hnotices %}
+                        <article class="notice-item">
+                            <time datetime="{{notice.created_at|date:'M d,Y'}}">{{notice.created_at|date:'M d,Y'}}</time>
+                            <h4><a href="{% url 'notice_detail' notice.slug %}">{{notice.title}}</a></h4>
+                        </article>
+                        {% endfor %}
+
+                    </div>
+                    <a href="{% url 'notices' %}" class="view-all-link">View All Notices</a>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Why Prottasha Section -->
+        <section class="why-prottasha">
+            <div class="container">
+                <h2>Why Choose Prottasha Model School?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Excellence in Education</h3>
+                        <p>Our experienced faculty and proven teaching methods ensure academic excellence and holistic development of every student.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏫</div>
+                        <h3>Modern Facilities</h3>
+                        <p>State-of-the-art classrooms, well-equipped laboratories, library, and sports facilities provide the best learning environment.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍🏫</div>
+                        <h3>Qualified Teachers</h3>
+                        <p>Our dedicated team of qualified and experienced teachers are committed to nurturing each student's potential.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teachers Panel Section -->
+        <section class="teachers-panel">
+            <div class="container">
+                <h2>Our Dedicated Faculty</h2>
+                <div class="teachers-grid">
+                    {% for teacher in teachers %}
+                    
+                    <div class="teacher-card">
+                        {% if teacher.photo %}
+                        <img src="{{ teacher.photo.url }}" alt="{{teacher.name}}">
+                        {% else %}
+                        <img src="/placeholder.svg?height=200&width=200" alt="{{teacher.name}}">
+                        {% endif %}
+                        <h3>{{teacher.name}}</h3>
+                        <p>{{teacher.designation}}</p>
+                        <a href="{% url 'teacher_detail' teacher.tslug %}" class="teacher-link">View Profile</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="teachers-cta">
+                    <a href="{% url 'teachers' %}" class="cta-button">View All Teachers</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2>School Gallery</h2>
+                <div class="gallery-grid">
+                    {% for g in gallery %}
+                    <div class="gallery-item">
+                        {% if g.image %}
+                        <img src="{{ g.image.url }}" alt="{{ g.title }}">
+                        {% else %}
+                        <img src="/placeholder.svg?height=200&width=200" alt="{{ g.title }}">
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="achievements">
+            <div class="container">
+                <h2>Our Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🏆</div>
+                        <h3>100% Pass Rate</h3>
+                        <p>ALL JSC & SSC Examination</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🥇</div>
+                        <h3>District Champion</h3>
+                        <p>Inter-School Science Fair</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">📚</div>
+                        <h3>Best School</h3>
+                        <p>Narayanganj Sadar Upazilla</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🎯</div>
+                        <h3>150+ A+ Grade</h3>
+                        <p>JSC &SSC Examination</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+{% endblock %}

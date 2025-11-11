@@ -1,0 +1,113 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} {{teacher.name}}- Teacher - Prottasha Model School {% endblock %}
+{% block meta_description %} Detailed profile of our dedicated teacher {{teacher.name}}at Prottasha Model School. {% endblock %}
+{% block og_title %} {{teacher.name}}- Teacher - Prottasha Model School {% endblock %}
+{% block canonical_url %} {{teacher.slug}} {% endblock %}
+{% block og_description %} Detailed profile of our dedicated teacher {{teacher.name}}at Prottasha Model School. {% endblock %}
+{% block og_image %}/images/notices-og-image.jpg{% endblock %} 
+
+
+    <meta name="description" content="">
+
+
+{% block content %}
+
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'teachers' %}">Teachers</a></li>
+                <li id="teacherNameBreadcrumb">Teacher Profile</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <section class="teacher-profile-section">
+            <div class="container">
+                <div class="profile-content" id="profileContent">
+
+
+                      <div class="teacher-profile-header">
+                        <div class="profile-image">
+                        {% if teacher.photo %}
+                            <img src="{{ teacher.photo.url }}" alt="{{ teacher.name }}">
+                        {% else %}
+                            <img src="default-teacher.png" alt="{{ teacher.name }}">
+                        {% endif %}
+                        </div>
+                        <div class="profile-basic-info">
+                        <h1>{{ teacher.name }}</h1>
+                        <h2>{{ teacher.designation }}</h2>
+                        {% if teacher.subject %}
+                            <p class="subject-info">{{ teacher.subject }} Teacher</p>
+                        {% endif %}
+                        {% if teacher.experience %}
+                            <p class="experience-info">{{ teacher.experience }} of teaching experience</p>
+                        {% endif %}
+                        <div class="contact-info">
+                            {% if teacher.email %}
+                            <p><strong>Email:</strong> <a href="mailto:{{ teacher.email }}">{{ teacher.email }}</a></p>
+                            {% endif %}
+                            {% if teacher.phone %}
+                            <p><strong>Phone:</strong> <a href="tel:{{ teacher.phone }}">{{ teacher.phone }}</a></p>
+                            {% endif %}
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        {% if teacher.about %}
+                        <div class="profile-section">
+                            <h3>About</h3>
+                            <p>{{ teacher.about }}</p>
+                        </div>
+                        {% endif %}
+
+                        {% if teacher.education %}
+                        <div class="profile-section">
+                            <h3>Education</h3>
+                            <p>{{ teacher.education }}</p>
+                        </div>
+                        {% endif %}
+
+                        {% if specializations %}
+                        <div class="profile-section">
+                            <h3>Specializations</h3>
+                            <ul class="specializations-list">
+                            {% for spec in specializations %}
+                                <li>{{ spec }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+
+                        {% if achievements %}
+                        <div class="profile-section">
+                            <h3>Key Achievements</h3>
+                            <ul class="achievements-list">
+                            {% for ach in achievements %}
+                                <li>{{ ach }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="profile-actions">
+                        <a href="{% url 'teachers' %}" class="back-btn">← Back to Teachers</a>
+                        <a href="{% url 'contact' %}" class="contact-btn">Contact School</a>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+ {% endblock %}
+
+

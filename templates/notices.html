@@ -1,0 +1,104 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} Notices - Prottasha Model School | Latest Updates and Announcements {% endblock %}
+{% block meta_description %} Stay updated with the latest notices, announcements, and important information from Prottasha Model School. {% endblock %}
+{% block og_title %} Notices - Prottasha Model School {% endblock %}
+{% block canonical_url %} https://prottasha.school/notices {% endblock %}
+{% block og_description %} Latest notices and announcements from Prottasha Model School. {% endblock %}
+{% block og_image %}/images/notices-og-image.jpg{% endblock %} 
+
+{% block content %}
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li>Notices</li>
+            </ol>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>School Notices & Announcements</h1>
+                <p>Stay informed with the latest updates, announcements, and important information from Prottasha Model School.</p>
+            </div>
+        </section>
+
+        <section class="notice-search">
+            <div class="container">
+                <div class="search-controls">
+                    <input type="text" id="noticeSearch" placeholder="Search notices..." class="search-input">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="admission">Admission</option>
+                        <option value="exam">Examination</option>
+                        <option value="event">Events</option>
+                        <option value="holiday">Holidays</option>
+                        <option value="general">General</option>
+                    </select>
+                    <select id="yearFilter" class="filter-select">
+                        <option value="">All Years</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="notices-listing">
+            <div class="container">
+                <div class="notices-grid" id="noticesGrid">
+                    {% for notice in npage_obj %}
+                    <article class="notice-card" data-category="{{notice.topic|lower}}" data-year="{{notice.created_at|date:'Y'}}" data-date="{{notice.created_at|date:'Y-m-d'}}">
+                        <div class="notice-header">
+                            <span class="notice-category {{notice.topic}}">{{notice.topic}}</span>
+                            <time datetime="{{ notice.created_at|date:'Y-m-d' }}">{{ notice.created_at|date:"F d, Y" }}</time>
+                        </div>
+                        <h3><a href="{% url 'notice_detail' notice.slug %}">{{notice.title}}</a></h3>
+                        <p>{{notice.content|truncatewords:20|safe}}</p>
+                        <div class="notice-footer">
+                            <span class="notice-priority {{notice.priority}}">{{notice.priority|title}} Priority</span>
+                            <a href="{% url 'notice_detail' notice.slug %}" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+
+                <div class="pagination" id="pagination">
+                    {% if page_obj.has_previous %}
+                            <a href="?page={{ page_obj.previous_page_number }}">
+                                <button class="pagination-btn">← Previous</button>
+                            </a>
+                        {% else %}
+                            <button class="pagination-btn" disabled>← Previous</button>
+                        {% endif %}
+
+                        {% for num in page_obj.paginator.page_range %}
+                            {% if page_obj.number == num %}
+                                <button class="pagination-btn active">{{ num }}</button>
+                            {% else %}
+                                <a href="?page={{ num }}">
+                                    <button class="pagination-btn">{{ num }}</button>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}">
+                                <button class="pagination-btn">Next →</button>
+                            </a>
+                        {% else %}
+                            <button class="pagination-btn" disabled>Next →</button>
+                        {% endif %}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+{% block js_script %}
+<script src="js/notices.js" defer></script>
+{% endblock %}

@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://prottashaschool.edu.bd/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /admissions.html
+Allow: /results.html
+Allow: /teachers.html
+Allow: /notices.html
+Allow: /gallery.html
+Allow: /contact.html
+
+# Crawl delay
+Crawl-delay: 1

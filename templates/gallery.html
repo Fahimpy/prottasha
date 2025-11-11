@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Prottasha Model School</title>
+    <meta name="description" content="Explore the vibrant campus life, events, and achievements of Prottasha Model School through our photo gallery.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Gallery - Prottasha Model School">
+    <meta property="og:description" content="Explore the vibrant campus life, events, and achievements of Prottasha Model School through our photo gallery.">
+    <meta property="og:image" content="images/school-building.jpg">
+    <meta property="og:url" content="https://prottashaschool.edu.bd/gallery.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery - Prottasha Model School">
+    <meta name="twitter:description" content="Explore the vibrant campus life, events, and achievements of Prottasha Model School through our photo gallery.">
+    <meta name="twitter:image" content="images/school-building.jpg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Prottasha Model School",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Mahmudpur (Pakarmatha)",
+        "addressLocality": "Fatulla",
+        "addressRegion": "Narayanganj",
+        "addressCountry": "BD"
+      },
+      "telephone": "01940077100",
+      "email": "school.prottasha@gmail.com",
+      "url": "https://prottashaschool.edu.bd",
+      "sameAs": ["https://facebook.com/prottasha"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Prottasha Model School Logo">
+                </div>
+                <div class="school-name">
+                    <h1>Prottasha Model School</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="teachers.html">Teachers List</a></li>
+                        <li><a href="notices.html">Job Circular</a></li>
+                        <li><a href="gallery.html" class="active">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="{% url 'home' %}">Home</a>
+            <span>/</span>
+            <span>Gallery</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1>Photo Gallery</h1>
+                <p>Capturing moments of learning, growth, and achievement at Prottasha Model School</p>
+            </section>
+
+            <!-- Gallery Filters -->
+            <section class="gallery-filters">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Photos</button>
+                    <button class="filter-btn" data-filter="campus">Campus Life</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="sports">Sports</button>
+                    <button class="filter-btn" data-filter="cultural">Cultural Programs</button>
+                    <button class="filter-btn" data-filter="academic">Academic Activities</button>
+                </div>
+            </section>
+
+            <!-- Gallery Grid -->
+            <section class="gallery-grid">
+                <div class="gallery-item" data-category="campus">
+                    <img src="/placeholder.svg?height=300&width=400" alt="School Campus">
+                    <div class="gallery-overlay">
+                        <h3>School Campus</h3>
+                        <p>Our beautiful campus building</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Annual Function">
+                    <div class="gallery-overlay">
+                        <h3>Annual Function</h3>
+                        <p>Students performing on stage</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="academic">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Classroom">
+                    <div class="gallery-overlay">
+                        <h3>Classroom Learning</h3>
+                        <p>Interactive learning sessions</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="sports">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Sports Day">
+                    <div class="gallery-overlay">
+                        <h3>Sports Day</h3>
+                        <p>Annual sports competition</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="cultural">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Cultural Program">
+                    <div class="gallery-overlay">
+                        <h3>Cultural Program</h3>
+                        <p>Traditional dance performance</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="campus">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Library">
+                    <div class="gallery-overlay">
+                        <h3>School Library</h3>
+                        <p>Students reading in library</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="academic">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Science Lab">
+                    <div class="gallery-overlay">
+                        <h3>Science Laboratory</h3>
+                        <p>Hands-on experiments</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Prize Distribution">
+                    <div class="gallery-overlay">
+                        <h3>Prize Distribution</h3>
+                        <p>Recognizing student achievements</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="campus">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Playground">
+                    <div class="gallery-overlay">
+                        <h3>School Playground</h3>
+                        <p>Recreation and sports area</p>
+                        <button class="view-btn" data-image="/placeholder.svg?height=600&width=800">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn">Load More Photos</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-image" src="/placeholder.svg" alt="">
+            <div class="lightbox-caption">
+                <h3></h3>
+                <p></p>
+            </div>
+            <div class="lightbox-nav">
+                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 01940077100</p>
+                        <p><i class="fas fa-envelope"></i> school.prottasha@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Mahmudpur (Pakarmatha), Fatulla, Narayanganj</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="notices.html">Notices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/prottasha" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Prottasha Model School. All rights reserved.</p>
+                <p>Developed by <a href="#" target="_blank">NextPath</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+</body>
+</html>
